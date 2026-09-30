@@ -19,3 +19,5 @@ export const experience = [
  ['B2B + B2C','KOREA','Multi-Channel Distribution','We serve both individual and business customers through online commerce and professional distribution channels across Korea.'],
  ['PRODUCT → MARKET','END-TO-END','From Selection to Sales','From sourcing and localization to content, sales, logistics, and customer support, we manage the full journey to the Korean market.'],
 ];
+
+export function localizeProducts(t:(text:string)=>string):Product[]{return products.map(p=>({...p,title:t(p.title),description:t(p.description),tags:p.tags.map(t),overview:t(p.overview),scope:t(p.scope),channels:t(p.channels),timeline:t(p.timeline)}));}

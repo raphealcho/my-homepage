@@ -29,6 +29,28 @@ body{font-family:var(--font-inter),Arial,sans-serif;font-weight:500;color:#fafaf
 @media(min-width:810px){.about-page .about-title{font-size:14.6vw;line-height:.9;margin-bottom:16px}.about-intro{margin-top:16px}}
 .category-nav a{font-size:inherit;white-space:normal;min-width:0}@media(max-width:809px){.category-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:810px) and (max-width:1199px){.profile-image{aspect-ratio:1.55;object-fit:cover}}
 
+/* Language control and Japanese typography. */
+.language-control{position:relative;z-index:25;flex-shrink:0}
+.language-switch{display:flex;align-items:center;border:1px solid #555;padding:3px;gap:2px}
+.language-switch button{border:0;background:transparent;color:#aaa;font-size:12px;line-height:1;padding:9px 8px;min-height:32px;cursor:pointer}
+.language-switch button[aria-pressed=true]{background:#efeeea;color:#080808}
+.language-switch button:disabled{cursor:wait;opacity:.65}
+.language-error{position:absolute;top:calc(100% + 8px);right:0;width:220px;padding:12px;background:#222;color:white;font-size:13px}
+html[lang=ja] body{font-family:var(--font-inter),'Yu Gothic','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;line-break:strict}
+html[lang=ja] .section-title,html[lang=ja] .section-title.wide,html[lang=ja] .section-title.why-title,html[lang=ja] .experience .section-title{font-size:clamp(30px,7.2vw,116px);line-height:1.25;letter-spacing:-.025em;white-space:normal}
+html[lang=ja] .about-page .about-title{font-size:11vw;line-height:1.2;white-space:normal}
+html[lang=ja] .manifesto{font-size:clamp(26px,3.4vw,58px);line-height:1.65;letter-spacing:0}
+html[lang=ja] .about-intro,html[lang=ja] .product-description,html[lang=ja] .profile-info p,html[lang=ja] .market p,html[lang=ja] .overview p,html[lang=ja] .experience-row p{line-height:1.8;letter-spacing:0}
+html[lang=ja] .service-row h3{line-height:1.5;letter-spacing:0}
+html[lang=ja] .service-row p,html[lang=ja] .project-facts dd{line-height:1.8}
+html[lang=ja] .profile-info{top:60%}
+html[lang=ja] .contact-page h1{font-size:4.2vw;line-height:1.5;letter-spacing:0}
+html[lang=ja] .view-title,html[lang=ja] .website-action .view-title{font-size:8.4vw;line-height:1.3;letter-spacing:0}
+html[lang=ja] .hero-copy,html[lang=ja] .hero-tagline{line-height:1.6}
+@media(min-width:810px){.site-header{gap:16px}.desktop-nav{gap:18px}.desktop-contact{margin-left:auto;white-space:nowrap}.desktop-nav{margin-left:auto}html[lang=ja] .desktop-nav a{font-size:14px}}
+@media(min-width:810px) and (max-width:1199px){.site-header{gap:10px;padding-left:20px;padding-right:20px}.desktop-nav{gap:10px}.desktop-nav a,html[lang=ja] .desktop-nav a{font-size:12px}.desktop-contact{font-size:12px;padding:10px;gap:8px}.language-switch button{padding:9px 6px}}
+@media(max-width:809px){.language-control{margin-left:auto;margin-right:18px}.language-switch button{min-height:36px;padding:10px}.site-header{padding-left:20px;padding-right:20px}html[lang=ja] .contact-page h1{font-size:8vw}html[lang=ja] .hero-copy{font-size:15px;right:12px}html[lang=ja] .hero-tagline{font-size:14px;padding:0 14px}html[lang=ja] .view-title,html[lang=ja] .website-action .view-title{font-size:8vw}html[lang=ja] .detail h1{font-size:10vw;line-height:1.3}html[lang=ja] .profile-info{position:static}html[lang=ja] .desktop-break{display:none}}
+
 /* Hero reference alignment and interactive background. */
 .hero{isolation:isolate;background:#090909}
 .interactive-grid{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
