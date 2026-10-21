@@ -1,5 +1,5 @@
 import details from './product-details.json';
-export type Product = {slug:string;title:string;image:string;description:string;tags:string[];overview:string;year:string;gallery:string[];lastImage:string;scope:string;channels:string;timeline:string};
+export type Product = {slug:string;title:string;image:string;description:string;tags:string[];overview:string;year:string;gallery:string[];lastImage:string|null;scope:string;channels:string;timeline:string};
 const base = [
  {slug:'tools-power-tools',title:'TOOLS & POWER TOOLS',image:'tools.png',description:'Professional tools selected for durability, precision, and real-world performance.',tags:['HAND TOOLS','POWER TOOLS','ACCESSORIES'],overview:'We select professional tools that deliver reliable performance in real working environments. Our focus is not on brand recognition alone, but on durability, usability, build quality, and long-term value.'},
  {slug:'industrial-products',title:'INDUSTRIAL PRODUCTS',image:'industrial.png'},
